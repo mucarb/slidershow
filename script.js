@@ -1,7 +1,11 @@
-let totalSlides = document.querySelectorAll('.slider-item').length
+let totalSlides = document.querySelectorAll('.slider-item').length;
 let currentSlide = 0;
 
-document.querySelector('.slider-width').style.width = `calc(100vw * ${totalSlides})`;
+let sliderWidth = document.querySelector('.slider').clientWidth;
+
+document.querySelector('.slider-width').style.width = `${sliderWidth * totalSlides}px`;
+
+document.querySelector('.slider-coltrols').style.width = `${sliderWidth}px`;
 
 document.querySelector('.slider-coltrols').style.height = `${document.querySelector('.slider').clientHeight}px`;
 
